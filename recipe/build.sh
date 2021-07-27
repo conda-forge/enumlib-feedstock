@@ -5,7 +5,9 @@ cd src
 make
 make enum.x
 make polya.x
+make makestr.x
 
 mkdir -p ${PREFIX}/bin
 cp enum.x ${PREFIX}/bin/enum.x
 cp polya.x ${PREFIX}/bin/polya.x
+cp makestr.x ${PREFIX}/bin/makestr.x
