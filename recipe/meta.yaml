@@ -1,5 +1,5 @@
 {% set name = "enumlib" %}
-{% set version = "2.0.4" %}
+{% set version = "2.0.5" %}
 {% set symlibver = "1f821512c42b1564893beb2a784451ace1ebfd01" %}
 
 package:
@@ -9,19 +9,19 @@ package:
 source:
   - fn: enumlib.tar.gz
     url: https://github.com/msg-byu/{{ name }}/archive/v{{ version }}.tar.gz
-    sha256: f41806c16656dca65e712bfca0ad3d5635e49466ee9dc42d64aff1a53e70f000
+    sha256: 294e53934701217a983a59d360dd7640fc768db9eb143aa3b18bad200578b83e
     patches:
       - make.patch
   - fn: symlib.tar.gz
     url: https://github.com/msg-byu/symlib/archive/{{ symlibver }}.tar.gz
     sha256: b368b92f3adceac4f4fc04d893c9220529651c26d8f6c4245acf5f80531c7244
     folder: symlib
-    patches: 
-      - symlib.patch 
+    patches:
+      - symlib.patch
 
 build:
-  number: 1
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
 
 requirements:
   build:
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Enumeration library for generating derivative structures.'
+  summary: Enumeration library for generating derivative structures.
   description: |
     This code generates the derivative superstructures of a parent lattice.
     It works for general lattices, including "multilattices," like HCP, which
