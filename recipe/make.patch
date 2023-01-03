@@ -1,17 +1,17 @@
-From a48246f1ca70912e18815aafcdd6ce7ece58a933 Mon Sep 17 00:00:00 2001
+From 30b5ba0ab62b6d1d2d9c0949730218440fe6a30c Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
-Date: Wed, 14 Jul 2021 18:21:35 +0200
+Date: Tue, 3 Jan 2023 02:03:49 -0700
 Subject: [PATCH] Update Makefile
 
 ---
- src/Makefile | 52 ----------------------------------------------------
- 1 file changed, 52 deletions(-)
+ src/Makefile | 53 ----------------------------------------------------
+ 1 file changed, 53 deletions(-)
 
 diff --git a/src/Makefile b/src/Makefile
-index 8d4741ee..da6f127d 100644
+index 659622ff..da6f127d 100644
 --- a/src/Makefile
 +++ b/src/Makefile
-@@ -9,57 +9,6 @@ SHELL		= /bin/bash
+@@ -9,58 +9,6 @@ SHELL		= /bin/bash
  # enumlib library paths
  LBD1 = ../symlib/src
  
@@ -21,7 +21,8 @@ index 8d4741ee..da6f127d 100644
 -     FFLAGS = -O3 -ffree-line-length-none -fno-underscoring -I${LBD1}
 -     FOUND = true
 -  else
--     FFLAGS = -fPIC -g -fbounds-check -Wall -ffree-line-length-none -fno-underscoring -I${LBD1}
+-	FFLAGS = -fPIC -g -fbounds-check -ffree-line-length-none -fno-underscoring -I${LBD1}
+-     #FFLAGS = -fPIC -g -fbounds-check -Wall -ffree-line-length-none -fno-underscoring -I${LBD1}
 -     FOUND = true
 -  endif
 -endif
@@ -69,7 +70,7 @@ index 8d4741ee..da6f127d 100644
  # if type "python" > /dev/null; then
  #     python irevision.py derivative_structure_generator.f90 version.enum
  # fi
-@@ -81,7 +30,6 @@ lib: pre_comp libenum.a
+@@ -82,7 +30,6 @@ lib: pre_comp libenum.a
  
  pre_comp:
  	+$(MAKE) -C ../symlib/src
